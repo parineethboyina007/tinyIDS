@@ -1,0 +1,40 @@
+{
+  "tenant": "default",
+  "generated_at": "2026-01-29T08:06:27.547272",
+  "metrics": {
+    "tenant": "default",
+    "generated_at": "2026-01-29T08:06:27.548204",
+    "total_requests": 4,
+    "blocked_requests": 2,
+    "block_rate": 0.01,
+    "critical_blocks": 2,
+    "top_rules": [
+      {
+        "rule_id": "malware_intent",
+        "count": 2
+      }
+    ],
+    "policy_modes": {
+      "active": {
+        "blocked": 2,
+        "allowed": 2
+      }
+    },
+    "risk_distribution": {
+      "1.0": 2,
+      "0.0": 2
+    }
+  },
+  "trust_safety_report": "governance/trust_safety_reports/default__trust_safety_report.json",
+  "evidence_bundle": "governance/evidence_bundles/default__evidence_bundle.zip",
+  "evidence_bundle_hash": "e84e1f7429c31f8904fb6a9e92d686763571e018c6e9574caeb66774bc42e41b",
+  "policy_lifecycles": [
+    "malware_intent"
+  ],
+  "standards_asserted": [
+    "SOC2",
+    "ISO27001",
+    "AI-Governance"
+  ],
+  "attestation_statement": "This system enforces, monitors, explains, and governs LLM behavior with auditable integrity."
+}

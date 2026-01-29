@@ -1,0 +1,13 @@
+{
+  "version": "e5919255130b466e9cc41013a8abe67d",
+  "tenant": "default",
+  "mode": "canary",
+  "reason": "adaptive_update",
+  "parent": "fd26caa033304f48a02222ff19b19de5",
+  "created_at": "2026-01-26T16:05:41.328218",
+  "thresholds": {
+    "risk_block_threshold": 0.6,
+    "severity_floor": "Critical",
+    "last_updated": "2026-01-26T16:05:41.327430"
+  }
+}

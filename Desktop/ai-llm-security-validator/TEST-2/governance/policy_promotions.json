@@ -1,0 +1,9 @@
+[
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "action": "promoted_to_active",
+    "reason": "canary_stability_confirmed",
+    "timestamp": "2026-01-28T14:47:47.922562"
+  }
+]

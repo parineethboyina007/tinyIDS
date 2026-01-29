@@ -1,0 +1,15 @@
+{
+  "tenant": "default",
+  "frozen": true,
+  "reason": "post_canary_promotion_seal",
+  "detected_at": "2026-01-27T23:02:26.722782",
+  "cooldown_minutes": 10,
+  "scope": {
+    "severity_floor": true,
+    "risk_block_threshold": true
+  },
+  "decay": {
+    "risk_block_threshold": 10,
+    "severity_floor": 25
+  }
+}

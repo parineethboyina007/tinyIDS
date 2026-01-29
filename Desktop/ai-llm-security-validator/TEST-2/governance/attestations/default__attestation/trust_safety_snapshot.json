@@ -1,0 +1,12 @@
+{
+  "tenant": "default",
+  "executive_summary": {
+    "total_requests": 4,
+    "blocked_requests": 2,
+    "block_rate": 0.5,
+    "critical_blocks": 2,
+    "system_status": "aggressive"
+  },
+  "generated_at": "2026-01-29T15:05:55.643994",
+  "source_report": "governance/trust_safety_reports/default__trust_safety_report.json"
+}

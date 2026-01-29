@@ -1,0 +1,12 @@
+{
+  "tenant": "default",
+  "generated_at": "2026-01-29T08:06:27.549018",
+  "files": {
+    "trust_safety_reports/default__trust_safety_report.json": "448e4d35c00b98e92d17fcafac9ce3900f6f1bd261f06a6fdf43ca3c8ddffa02",
+    "trust_safety_reports/default__trust_safety_report.md": "5551c4eee7d0f0403a97dca5a562889ad1f7656c8fa24476f11c8a4037bbe50b",
+    "compliance_exports/default__compliance_export.json": "d718834c7b8215073c62ba3790b8125f48d7a92344ca4f8a3e177f4c70d39d71",
+    "policy_archive/default__block_malware_generation.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "policy_rollbacks.json": "516b3cbf264c2028d7226a23244570b9402ced63271708d738c310ecbc061c2a"
+  },
+  "hash_algorithm": "SHA-256"
+}

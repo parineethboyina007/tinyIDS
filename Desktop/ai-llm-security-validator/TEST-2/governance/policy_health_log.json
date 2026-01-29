@@ -1,0 +1,602 @@
+[
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 25,
+    "evaluated_at": "2026-01-28T15:24:50.994548"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 24,
+    "evaluated_at": "2026-01-28T16:20:08.623738"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 25,
+    "evaluated_at": "2026-01-28T16:20:08.636476"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 26,
+    "evaluated_at": "2026-01-28T16:20:08.645375"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 27,
+    "evaluated_at": "2026-01-28T16:20:08.653880"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 28,
+    "evaluated_at": "2026-01-28T16:20:08.662423"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 29,
+    "evaluated_at": "2026-01-28T16:20:08.671078"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 30,
+    "evaluated_at": "2026-01-28T16:20:08.680523"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 31,
+    "evaluated_at": "2026-01-28T16:20:08.688816"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 32,
+    "evaluated_at": "2026-01-28T16:20:08.698056"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 33,
+    "evaluated_at": "2026-01-28T16:20:08.707573"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 34,
+    "evaluated_at": "2026-01-28T16:20:08.718119"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 35,
+    "evaluated_at": "2026-01-28T16:20:08.727551"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 36,
+    "evaluated_at": "2026-01-28T16:20:08.737968"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 37,
+    "evaluated_at": "2026-01-28T16:20:08.747715"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 38,
+    "evaluated_at": "2026-01-28T16:20:08.755920"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 38,
+    "evaluated_at": "2026-01-28T16:20:17.399618"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 38,
+    "evaluated_at": "2026-01-28T16:20:17.413680"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 38,
+    "evaluated_at": "2026-01-28T16:20:17.424892"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 38,
+    "evaluated_at": "2026-01-28T16:20:17.434753"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 38,
+    "evaluated_at": "2026-01-28T16:20:17.443550"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 38,
+    "evaluated_at": "2026-01-28T16:20:34.518187"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 39,
+    "evaluated_at": "2026-01-28T16:27:06.180741"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 40,
+    "evaluated_at": "2026-01-28T16:27:06.194280"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 41,
+    "evaluated_at": "2026-01-28T16:27:06.203838"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 42,
+    "evaluated_at": "2026-01-28T16:27:06.213347"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 43,
+    "evaluated_at": "2026-01-28T16:27:06.223907"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 44,
+    "evaluated_at": "2026-01-28T16:27:06.233782"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 45,
+    "evaluated_at": "2026-01-28T16:27:06.243746"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 46,
+    "evaluated_at": "2026-01-28T16:27:06.253048"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 47,
+    "evaluated_at": "2026-01-28T16:27:06.262360"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 48,
+    "evaluated_at": "2026-01-28T16:27:06.272646"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "medium",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 49,
+    "evaluated_at": "2026-01-28T16:27:06.281317"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 50,
+    "evaluated_at": "2026-01-28T16:27:06.291801"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 51,
+    "evaluated_at": "2026-01-28T16:27:06.301002"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 52,
+    "evaluated_at": "2026-01-28T16:27:06.310766"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 53,
+    "evaluated_at": "2026-01-28T16:27:06.319429"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 53,
+    "evaluated_at": "2026-01-28T16:27:17.881114"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 53,
+    "evaluated_at": "2026-01-28T16:27:17.894246"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 53,
+    "evaluated_at": "2026-01-28T16:27:17.904471"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 53,
+    "evaluated_at": "2026-01-28T16:27:17.914357"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 53,
+    "evaluated_at": "2026-01-28T16:27:17.923265"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 53,
+    "evaluated_at": "2026-01-28T16:27:17.932730"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 54,
+    "evaluated_at": "2026-01-28T16:27:40.394721"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 55,
+    "evaluated_at": "2026-01-28T16:32:55.975681"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 56,
+    "evaluated_at": "2026-01-28T16:32:55.986846"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 57,
+    "evaluated_at": "2026-01-28T16:32:55.996709"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 58,
+    "evaluated_at": "2026-01-28T16:32:56.006068"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 59,
+    "evaluated_at": "2026-01-28T16:32:56.015553"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 60,
+    "evaluated_at": "2026-01-28T16:32:56.027428"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 61,
+    "evaluated_at": "2026-01-28T16:32:56.038078"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 62,
+    "evaluated_at": "2026-01-28T16:32:56.049730"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 63,
+    "evaluated_at": "2026-01-28T16:32:56.063108"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 64,
+    "evaluated_at": "2026-01-28T16:32:56.072517"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 65,
+    "evaluated_at": "2026-01-28T16:33:25.448001"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 65,
+    "evaluated_at": "2026-01-29T05:38:22.476665"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 65,
+    "evaluated_at": "2026-01-29T05:57:08.152022"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 65,
+    "evaluated_at": "2026-01-29T06:06:13.495270"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 65,
+    "evaluated_at": "2026-01-29T06:33:43.078106"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "health_score": 1.0,
+    "confidence": "high",
+    "blocked_events": 0,
+    "false_positives": 0,
+    "clean_events": 65,
+    "evaluated_at": "2026-01-29T06:33:47.073276"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "request_id": "8dacfab6-d8f8-41b0-a18d-a3a4da9655b9",
+  "data": {
+    "stage": "request",
+    "policy_mode": "active",
+    "decision": "blocked",
+    "violations": [
+      {
+        "id": "malware_intent",
+        "severity": "Critical",
+        "confidence": 0.98,
+        "evidence": "write malware"
+      }
+    ],
+    "generated_at": "2026-01-29T06:41:12.905410",
+    "risk_score": 1.0,
+    "risk_level": "critical",
+    "summary": "Blocked at request stage due to 1 security rule violation(s)."
+  },
+  "stored_at": "2026-01-29T06:41:12.905425"
+}

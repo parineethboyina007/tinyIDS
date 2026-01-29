@@ -1,0 +1,146 @@
+{
+  "tenant": "default",
+  "generated_at": "2026-01-29T07:06:33.495450",
+  "standards_supported": [
+    "SOC2",
+    "ISO27001",
+    "AI-Governance"
+  ],
+  "metrics": {
+    "tenant": "default",
+    "generated_at": "2026-01-29T07:06:33.496317",
+    "total_requests": 4,
+    "blocked_requests": 2,
+    "block_rate": 0.5,
+    "critical_blocks": 2,
+    "top_rules": [
+      {
+        "rule_id": "malware_intent",
+        "count": 2
+      }
+    ],
+    "policy_modes": {
+      "active": {
+        "blocked": 2,
+        "allowed": 2
+      }
+    },
+    "risk_distribution": {
+      "1.0": 2,
+      "0.0": 2
+    }
+  },
+  "policies": {},
+  "rollbacks": [
+    {
+      "tenant": "default",
+      "rule_id": "block_malware_generation",
+      "reason": "excessive_false_positives_or_entropy",
+      "rolled_back_at": "2026-01-28T16:27:40.394521",
+      "retired_at": "2026-01-28T16:27:40.394521"
+    },
+    {
+      "tenant": "default",
+      "rule_id": "block_malware_generation",
+      "reason": "excessive_false_positives_or_entropy",
+      "rolled_back_at": "2026-01-28T16:32:55.975520",
+      "retired_at": "2026-01-28T16:32:55.975520"
+    },
+    {
+      "tenant": "default",
+      "rule_id": "block_malware_generation",
+      "reason": "excessive_false_positives_or_entropy",
+      "rolled_back_at": "2026-01-28T16:32:55.986749",
+      "retired_at": "2026-01-28T16:32:55.986749"
+    },
+    {
+      "tenant": "default",
+      "rule_id": "block_malware_generation",
+      "reason": "excessive_false_positives_or_entropy",
+      "rolled_back_at": "2026-01-28T16:32:55.996609",
+      "retired_at": "2026-01-28T16:32:55.996609"
+    },
+    {
+      "tenant": "default",
+      "rule_id": "block_malware_generation",
+      "reason": "excessive_false_positives_or_entropy",
+      "rolled_back_at": "2026-01-28T16:33:25.447742",
+      "retired_at": "2026-01-28T16:33:25.447742"
+    }
+  ],
+  "request_explanations": [
+    {
+      "request_id": "51273f01-40fc-4f58-92ac-269218d60a96",
+      "data": {
+        "stage": "request",
+        "policy_mode": "active",
+        "decision": "blocked",
+        "violations": [
+          {
+            "id": "malware_intent",
+            "severity": "Critical",
+            "confidence": 0.98,
+            "evidence": "write malware"
+          }
+        ],
+        "generated_at": "2026-01-29T07:03:53.958629",
+        "risk_score": 1.0,
+        "risk_level": "critical",
+        "summary": "Blocked at request stage due to 1 security rule violation(s)."
+      },
+      "stored_at": "2026-01-29T07:03:53.958642"
+    },
+    {
+      "request_id": "12b73f05-16f0-4bda-b3ec-52d897562d7a",
+      "data": {
+        "stage": "response",
+        "policy_mode": "active",
+        "decision": "allowed",
+        "violations": [],
+        "generated_at": "2026-01-29T06:41:20.475143",
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "summary": "Allowed at response stage. No security violations detected."
+      },
+      "stored_at": "2026-01-29T06:41:20.475162"
+    },
+    {
+      "request_id": "9d52523e-c2f4-408a-8f10-acc86d64b476",
+      "data": {
+        "stage": "response",
+        "policy_mode": "active",
+        "decision": "allowed",
+        "violations": [],
+        "generated_at": "2026-01-29T07:03:49.945522",
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "summary": "Allowed at response stage. No security violations detected."
+      },
+      "stored_at": "2026-01-29T07:03:49.945539"
+    },
+    {
+      "request_id": "8dacfab6-d8f8-41b0-a18d-a3a4da9655b9",
+      "data": {
+        "stage": "request",
+        "policy_mode": "active",
+        "decision": "blocked",
+        "violations": [
+          {
+            "id": "malware_intent",
+            "severity": "Critical",
+            "confidence": 0.98,
+            "evidence": "write malware"
+          }
+        ],
+        "generated_at": "2026-01-29T06:41:12.905410",
+        "risk_score": 1.0,
+        "risk_level": "critical",
+        "summary": "Blocked at request stage due to 1 security rule violation(s)."
+      },
+      "stored_at": "2026-01-29T06:41:12.905425"
+    }
+  ],
+  "archived_policies": [
+    {}
+  ]
+}

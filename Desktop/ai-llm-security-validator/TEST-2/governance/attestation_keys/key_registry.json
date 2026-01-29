@@ -1,0 +1,18 @@
+{
+  "active_key_created_at": "2026-01-29T15:05:49.452134",
+  "active_key_expires_at": "2026-04-29T15:05:49.452134",
+  "archived_keys": [
+    {
+      "public_key": "governance/attestation_keys/archived/2026-01-29T13-38-45.098362_public.pem",
+      "retired_at": "2026-01-29T13:41:12.514123"
+    },
+    {
+      "public_key": "governance/attestation_keys/archived/2026-01-29T13-41-12.514123_public.pem",
+      "retired_at": "2026-01-29T13:48:16.267993"
+    },
+    {
+      "public_key": "governance/attestation_keys/archived/2026-01-29T13-48-16.267993_public.pem",
+      "retired_at": "2026-01-29T15:05:49.452134"
+    }
+  ]
+}

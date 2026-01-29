@@ -1,0 +1,16 @@
+[
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "action": "narrowed",
+    "reason": "false_positive_detected",
+    "timestamp": "2026-01-28T12:14:39.754282"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "action": "rewidened",
+    "reason": "sustained_clean_traffic",
+    "timestamp": "2026-01-28T12:22:53.953673"
+  }
+]

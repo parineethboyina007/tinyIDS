@@ -1,0 +1,14 @@
+{
+  "request_id": "12b73f05-16f0-4bda-b3ec-52d897562d7a",
+  "data": {
+    "stage": "response",
+    "policy_mode": "active",
+    "decision": "allowed",
+    "violations": [],
+    "generated_at": "2026-01-29T06:41:20.475143",
+    "risk_score": 0.0,
+    "risk_level": "low",
+    "summary": "Allowed at response stage. No security violations detected."
+  },
+  "stored_at": "2026-01-29T06:41:20.475162"
+}

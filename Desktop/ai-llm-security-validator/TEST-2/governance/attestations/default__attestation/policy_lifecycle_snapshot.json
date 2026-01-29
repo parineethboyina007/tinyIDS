@@ -1,0 +1,67 @@
+{
+  "tenant": "default",
+  "events": [
+    {
+      "rule_id": "block_malware_generation",
+      "events": [
+        {
+          "event": "narrowed",
+          "timestamp": "2026-01-28T16:27:06.291498",
+          "details": {
+            "before": {
+              "id": "block_malware_generation",
+              "match": {
+                "keywords": [
+                  "write malware"
+                ]
+              },
+              "action": "block",
+              "severity": "Critical",
+              "explanation": "Malware generation or credential exfiltration attempt",
+              "family": "malware",
+              "confidence": 7,
+              "committed_at": "2026-01-27T23:56:50.462540",
+              "narrowed": false,
+              "narrowed_at": "2026-01-28T12:01:43.134504",
+              "rewidened_at": "2026-01-28T12:22:53.953673",
+              "rewidening_mode": "canary",
+              "demoted_at": "2026-01-28T15:28:31.084308"
+            },
+            "after": {
+              "id": "block_malware_generation",
+              "match": {
+                "keywords": [
+                  "write malware"
+                ]
+              },
+              "action": "block",
+              "severity": "High",
+              "explanation": "Malware generation or credential exfiltration attempt",
+              "family": "malware",
+              "confidence": 7,
+              "committed_at": "2026-01-27T23:56:50.462540",
+              "narrowed": true,
+              "narrowed_at": "2026-01-28T16:27:06.291495",
+              "rewidened_at": "2026-01-28T12:22:53.953673",
+              "rewidening_mode": "canary",
+              "demoted_at": "2026-01-28T15:28:31.084308",
+              "require_context": [
+                "write",
+                "create",
+                "build",
+                "generate"
+              ]
+            }
+          }
+        },
+        {
+          "event": "retired",
+          "timestamp": "2026-01-28T16:27:40.394521",
+          "reason": "excessive_false_positives_or_entropy"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-01-29T15:05:55.643994",
+  "rules_tracked": 1
+}

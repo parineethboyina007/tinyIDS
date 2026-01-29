@@ -1,0 +1,10 @@
+[
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "action": "demoted_to_canary",
+    "health_score": 0.3,
+    "false_positives": 0,
+    "timestamp": "2026-01-28T15:28:31.084308"
+  }
+]

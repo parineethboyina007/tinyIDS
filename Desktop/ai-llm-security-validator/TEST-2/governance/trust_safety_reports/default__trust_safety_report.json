@@ -1,0 +1,109 @@
+{
+  "tenant": "default",
+  "generated_at": "2026-01-29T15:05:55.644959",
+  "executive_summary": {
+    "total_requests": 4,
+    "blocked_requests": 2,
+    "block_rate": 0.5,
+    "critical_blocks": 2,
+    "system_status": "aggressive"
+  },
+  "security_metrics": {
+    "tenant": "default",
+    "generated_at": "2026-01-29T15:05:55.644848",
+    "total_requests": 4,
+    "blocked_requests": 2,
+    "block_rate": 0.5,
+    "critical_blocks": 2,
+    "top_rules": [
+      {
+        "rule_id": "malware_intent",
+        "count": 2
+      }
+    ],
+    "policy_modes": {
+      "active": {
+        "blocked": 2,
+        "allowed": 2
+      }
+    },
+    "risk_distribution": {
+      "1.0": 2,
+      "0.0": 2
+    }
+  },
+  "policy_lifecycle_examples": [],
+  "decision_examples": [
+    {
+      "request_id": "9d52523e-c2f4-408a-8f10-acc86d64b476",
+      "data": {
+        "stage": "response",
+        "policy_mode": "active",
+        "decision": "allowed",
+        "violations": [],
+        "generated_at": "2026-01-29T07:03:49.945522",
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "summary": "Allowed at response stage. No security violations detected."
+      },
+      "stored_at": "2026-01-29T07:03:49.945539"
+    },
+    {
+      "request_id": "8dacfab6-d8f8-41b0-a18d-a3a4da9655b9",
+      "data": {
+        "stage": "request",
+        "policy_mode": "active",
+        "decision": "blocked",
+        "violations": [
+          {
+            "id": "malware_intent",
+            "severity": "Critical",
+            "confidence": 0.98,
+            "evidence": "write malware"
+          }
+        ],
+        "generated_at": "2026-01-29T06:41:12.905410",
+        "risk_score": 1.0,
+        "risk_level": "critical",
+        "summary": "Blocked at request stage due to 1 security rule violation(s)."
+      },
+      "stored_at": "2026-01-29T06:41:12.905425"
+    },
+    {
+      "request_id": "51273f01-40fc-4f58-92ac-269218d60a96",
+      "data": {
+        "stage": "request",
+        "policy_mode": "active",
+        "decision": "blocked",
+        "violations": [
+          {
+            "id": "malware_intent",
+            "severity": "Critical",
+            "confidence": 0.98,
+            "evidence": "write malware"
+          }
+        ],
+        "generated_at": "2026-01-29T07:03:53.958629",
+        "risk_score": 1.0,
+        "risk_level": "critical",
+        "summary": "Blocked at request stage due to 1 security rule violation(s)."
+      },
+      "stored_at": "2026-01-29T07:03:53.958642"
+    }
+  ],
+  "compliance_alignment": {
+    "SOC2": [
+      "CC7.2 \u2013 Automated threat detection",
+      "CC7.3 \u2013 Incident response evidence"
+    ],
+    "ISO27001": [
+      "A.12 \u2013 Logging and monitoring",
+      "A.16 \u2013 Incident management"
+    ],
+    "AI-Governance": [
+      "Explainability",
+      "Auditability",
+      "Human oversight"
+    ]
+  }
+}

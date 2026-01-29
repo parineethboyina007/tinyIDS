@@ -1,0 +1,37 @@
+[
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "reason": "excessive_false_positives_or_entropy",
+    "rolled_back_at": "2026-01-28T16:27:40.394521",
+    "retired_at": "2026-01-28T16:27:40.394521"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "reason": "excessive_false_positives_or_entropy",
+    "rolled_back_at": "2026-01-28T16:32:55.975520",
+    "retired_at": "2026-01-28T16:32:55.975520"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "reason": "excessive_false_positives_or_entropy",
+    "rolled_back_at": "2026-01-28T16:32:55.986749",
+    "retired_at": "2026-01-28T16:32:55.986749"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "reason": "excessive_false_positives_or_entropy",
+    "rolled_back_at": "2026-01-28T16:32:55.996609",
+    "retired_at": "2026-01-28T16:32:55.996609"
+  },
+  {
+    "tenant": "default",
+    "rule_id": "block_malware_generation",
+    "reason": "excessive_false_positives_or_entropy",
+    "rolled_back_at": "2026-01-28T16:33:25.447742",
+    "retired_at": "2026-01-28T16:33:25.447742"
+  }
+]
