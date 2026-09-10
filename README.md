@@ -112,24 +112,58 @@ Empirically measured across all 8 physical workload scenarios:
 
 ---
 
-## 5. Web Dashboard Demo Procedure
+## 5. Live Security Dashboard & Risk Simulation
 
-1. **Power Device**: Plug Arduino Nano ESP32 into USB-C.
-2. **Connect Wi-Fi**:
-   - SSID: `TinyIDS-ESP32`
-   - Password: `tinyids123` (configurable in `config_private.h`)
-3. **Open Web Browser**:
-   - Access: `http://192.168.4.1/` (or Station IP if connected to network)
-4. **Live Verification**:
-   - Observe live system status banner (**SYSTEM NORMAL** / **⚠️ ANOMALY DETECTED**).
-   - View risk meter (0-100), 10-feature telemetry cards, behavioral indicators, decision tree path, and 20-window canvas risk graph.
-5. **Scenario Control over Serial**:
-   - Open Serial Monitor at 115200 baud.
-   - Type commands (`HIGH_RATE`, `COMPUTE`, `BURST`, `MEMORY`, `COMBINED`, `IDLE`, `PERIODIC`) to trigger workloads and observe live dashboard updates.
+TinyIDS serves a responsive real-time web dashboard directly out of ESP32 flash memory over Wi-Fi (`http://192.168.4.1/`).
+
+### System Normal Baseline State (Low Risk: 10 / 100)
+![TinyIDS Normal Baseline Dashboard State](docs/images/dashboard_normal.jpg)
+
+### Anomaly Detected State (High Risk: 93 / 100 CRITICAL)
+![TinyIDS Anomaly Detected Dashboard State](docs/images/dashboard_anomaly.jpg)
 
 ---
 
-## 6. How to Build & Train
+## 6. Interactive Risk Control & Simulation Commands
+
+You can simulate high-risk anomalies or low-risk baselines live on the physical ESP32 by sending interactive text commands over Serial Monitor (at **115200 baud**):
+
+### 📈 Commands to Increase Risk Score (Simulate Anomaly / High Risk)
+
+| Serial Command | Risk Score | Primary Behavioral Effect |
+| :--- | :---: | :--- |
+| **`COMBINED`** | **93 / 100 [CRITICAL]** | Fuses high-rate network traffic + CPU compute starvation |
+| **`HIGH_RATE`** | **93 / 100 [CRITICAL]** | Triggers 40 ops/s traffic flood on network interface |
+| **`COMPUTE`** | **90 – 92 / 100 [CRITICAL]** | Forces 18–20 ms CPU loop blocking (computation starvation) |
+| **`MEMORY`** | **90 – 92 / 100 [CRITICAL]** | Induces rapid dynamic SRAM heap allocations |
+| **`BURST`** | **85 / 100 [HIGH]** | Sends 8-packet rapid transaction bursts every 2.5s |
+
+### 📉 Commands to Decrease Risk Score (Simulate Baseline / Low Risk)
+
+| Serial Command | Risk Score | Primary Behavioral Effect |
+| :--- | :---: | :--- |
+| **`PERIODIC`** / **`NORMAL`** | **5 / 100 [LOW]** | Resets to normal 1-second interval periodic traffic (2 ops/s) |
+| **`IDLE`** | **10 / 100 [LOW]** | Resets to minimal background loop pass (0 ops/s) |
+| **`VARIABLE`** | **5 – 13 / 100 [LOW]** | Resets to normal variable traffic intervals (300–1200 ms) |
+
+---
+
+## 7. Web Dashboard Demo Procedure
+
+1. **Power Device**: Plug Arduino Nano ESP32 into USB-C.
+2. **Connect Wi-Fi**:
+   - Network Name (SSID): `TinyIDS-ESP32`
+   - Password: `tinyids123` (configurable in `config_private.h`)
+3. **Open Web Browser**:
+   - Access: `http://192.168.4.1/` (or Station IP if connected to network)
+4. **Interactive Risk Testing**:
+   - Open Serial Monitor at **115200 baud**.
+   - Send `COMBINED` $\rightarrow$ Watch Dashboard jump to **93 / 100 CRITICAL (Red Banner)**.
+   - Send `PERIODIC` $\rightarrow$ Watch Dashboard return to **5 / 100 LOW (Green Banner)**.
+
+---
+
+## 8. How to Build & Train
 
 ### Prerequisites
 - Python 3.9+ with `pyserial`, `scikit-learn`, `pandas`, `numpy`
@@ -157,6 +191,6 @@ python3 ml/export/parity_test.py
 
 ---
 
-## 7. License
+## 9. License
 
 Distributed under the MIT License. See `LICENSE` for details.
