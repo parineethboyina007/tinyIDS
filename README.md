@@ -30,23 +30,23 @@ Rather than relying on resource-intensive external network packet sniffers or re
 │  │ • Transaction & Bytes │          └─────────────────┬─────────────────┘   │
 │  │ • Free Heap & Delta   │                            │                     │
 │  │ • Loop Latency & Jitter│                           ▼                     │
-│  │ • RSSI & Socket Errors│                 ┌───────────────────┐           │
-│  └───────────────────────┘                 │ Z-Score Normaler  │           │
-│                                            └──────────┬────────┘           │
+│  │ • RSSI & Socket Errors│                 ┌───────────────────┐            │
+│  └───────────────────────┘                 │ Z-Score Normaler  │            │
+│                                            └──────────┬────────┘            │
 │                                                       │                     │
 │                                                       ▼                     │
-│                                            ┌───────────────────┐           │
-│                                            │ TinyML Decision   │           │
-│                                            │ Tree (25.7 µs)    │           │
-│                                            └──────────┬────────┘           │
+│                                            ┌───────────────────┐            │
+│                                            │ TinyML Decision   │            │
+│                                            │ Tree (25.7 µs)    │            │
+│                                            └──────────┬────────┘            │
 │                                                       │                     │
 │                                             NORMAL / ANOMALY                │
 │                                                       │                     │
 │                                                       ▼                     │
-│                                            ┌───────────────────┐           │
-│                                            │ Risk Meter & 2/3  │           │
-│                                            │ Temporal Consensus│           │
-│                                            └──────────┬────────┘           │
+│                                            ┌───────────────────┐            │
+│                                            │ Risk Meter & 2/3  │            │
+│                                            │ Temporal Consensus│            │
+│                                            └──────────┬────────┘            │
 │                                                       │                     │
 │                   ┌───────────────────────────────────┴───────────────┐     │
 │                   │                                                   │     │
