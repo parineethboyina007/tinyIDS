@@ -1,0 +1,26 @@
+# Private credentials & host network configs
+config_private.h
+firmware/TinyIDS/config_private.h
+
+# macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python compilation & environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.pytest_cache/
+
+# Arduino build artifacts
+build/
+*.bin
+*.elf
+*.hex
+
+# Large raw public datasets (avoid committing gigabytes to git)
+CICIOT23/
+*.parquet

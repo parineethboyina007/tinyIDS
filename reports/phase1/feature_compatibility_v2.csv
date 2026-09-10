@@ -1,0 +1,47 @@
+feature,meaning,dtype,packet_flow_derived,esp32_direct,esp32_derivable,requires_promiscuous,requires_network_monitor,leakage_risk,in_set_a,in_set_b,in_set_c,esp32_equivalent,measurement_method,confidence
+flow_duration,Duration of network flow in seconds,float64,Yes,No,Yes,No,No,None,Yes,Yes,Yes,connection_duration_ms,millis() delta between client.connect() and client.stop(),HIGH
+Header_Length,Cumulative length of packet headers in flow,float64,Yes,No,No,Yes,Yes,None,Yes,No,No,NOT MAPPABLE,Requires L2/L3 frame inspection inside LwIP pbuf; not exposed in Arduino Client API,NOT MAPPABLE
+Protocol Type,"Assigned IP protocol number (e.g. 6=TCP, 17=UDP)",float64,Yes,Yes,Yes,No,No,None,Yes,Yes,Yes,socket_protocol_id,"Constant based on application socket (WiFiClient=6, WiFiUDP=17)",HIGH
+Duration,Duration of observation window/connection,float64,Yes,Yes,Yes,No,No,None,Yes,Yes,Yes,window_duration_s,(current_millis - window_start_millis) / 1000.0,HIGH
+Rate,Packets per second over flow window,float64,Yes,No,Yes,No,No,None,Yes,Yes,Yes,packet_rate,(packets_tx + packets_rx) / window_seconds,HIGH
+Srate,Source-to-destination packet rate per second,float64,Yes,No,Yes,No,No,None,Yes,Yes,Yes,tx_rate,packets_tx / window_seconds from client socket calls,HIGH
+Drate,Destination-to-source packet rate per second,float64,Yes,No,Yes,No,No,None,Yes,Yes,Yes,rx_rate,packets_rx / window_seconds from client.available() data chunks,HIGH
+fin_flag_number,Proportion or presence of FIN flags in flow,float64,Yes,No,No,Yes,Yes,None,Yes,No,No,NOT MAPPABLE,TCP teardown handled internally by LwIP stack,NOT MAPPABLE
+syn_flag_number,Proportion or presence of SYN flags in flow,float64,Yes,No,No,Yes,Yes,None,Yes,Yes,No,connect_attempt_flag,"Proxied by client.connect() calls, but external SYN flood cannot be seen",LOW
+rst_flag_number,Proportion or presence of RST flags in flow,float64,Yes,No,No,Yes,Yes,None,Yes,Yes,No,socket_reset_flag,"Inferred from sudden socket disconnects, but raw flag inaccessible",LOW
+psh_flag_number,Presence of TCP PSH flags,float64,Yes,No,No,Yes,Yes,None,Yes,No,No,NOT MAPPABLE,L4 TCP header inspection required,NOT MAPPABLE
+ack_flag_number,Presence of TCP ACK flags,float64,Yes,No,No,Yes,Yes,None,Yes,Yes,No,NOT MAPPABLE,All established TCP traffic has ACK set; hidden in LwIP,NOT MAPPABLE
+ece_flag_number,Presence of ECN-Echo flag,float64,Yes,No,No,Yes,Yes,None,Yes,No,No,NOT MAPPABLE,Rare TCP flag; hidden by LwIP,NOT MAPPABLE
+cwr_flag_number,Presence of Congestion Window Reduced flag,float64,Yes,No,No,Yes,Yes,None,Yes,No,No,NOT MAPPABLE,Rare TCP flag; hidden by LwIP,NOT MAPPABLE
+ack_count,Cumulative count of ACK flags in window,float64,Yes,No,No,Yes,Yes,None,Yes,Yes,No,NOT MAPPABLE,Requires counting raw L4 TCP ACKs,NOT MAPPABLE
+syn_count,Cumulative count of SYN flags in window,float64,Yes,No,No,Yes,Yes,None,Yes,Yes,No,outgoing_connect_attempts,"Endpoint can count outgoing client.connect() calls, but cannot count incoming SYN flood frames",LOW
+fin_count,Cumulative count of FIN flags in window,float64,Yes,No,No,Yes,Yes,None,Yes,Yes,No,NOT MAPPABLE,Handled internally by LwIP,NOT MAPPABLE
+urg_count,Cumulative count of URG flags in window,float64,Yes,No,No,Yes,Yes,None,Yes,No,No,NOT MAPPABLE,TCP URG flag not exposed,NOT MAPPABLE
+rst_count,Cumulative count of RST flags in window,float64,Yes,No,No,Yes,Yes,None,Yes,Yes,No,socket_abort_count,"Can count connection drops/aborts, but not external RST frames",LOW
+HTTP,HTTP protocol activity indicator,float64,Yes,Yes,Yes,No,No,None,Yes,No,No,is_http_active,Direct from application logic,HIGH
+HTTPS,HTTPS / TLS protocol activity indicator,float64,Yes,Yes,Yes,No,No,None,Yes,No,No,is_https_active,Direct from application logic (WiFiClientSecure),HIGH
+DNS,DNS protocol activity indicator,float64,Yes,Yes,Yes,No,No,None,Yes,No,No,is_dns_active,Tracks WiFi.hostByName() resolution events,HIGH
+Telnet,Telnet protocol indicator,float64,Yes,No,No,No,No,Zero Variance (Constant 0.0),No,No,No,NOT MAPPABLE,Dropped (constant zero),NOT MAPPABLE
+SMTP,SMTP protocol indicator,float64,Yes,No,No,No,No,None,Yes,No,No,NOT MAPPABLE,Arduino IoT endpoint is not an email client/server,NOT MAPPABLE
+SSH,SSH protocol indicator,float64,Yes,No,No,No,No,None,Yes,No,No,NOT MAPPABLE,Arduino IoT endpoint does not host SSH,NOT MAPPABLE
+IRC,IRC protocol indicator,float64,Yes,No,No,No,No,Zero Variance (Constant 0.0),No,No,No,NOT MAPPABLE,Dropped (constant zero),NOT MAPPABLE
+TCP,TCP protocol indicator,float64,Yes,Yes,Yes,No,No,None,Yes,Yes,No,is_tcp_socket,Direct from socket object,HIGH
+UDP,UDP protocol indicator,float64,Yes,Yes,Yes,No,No,None,Yes,Yes,No,is_udp_socket,Direct from socket object,HIGH
+DHCP,DHCP protocol indicator,float64,Yes,No,No,No,No,None,Yes,No,No,NOT MAPPABLE,DHCP renewal handled in background by WiFi stack,LOW
+ARP,ARP protocol indicator,float64,Yes,No,No,Yes,Yes,None,Yes,No,No,NOT MAPPABLE,L2 frame broadcast; invisible to application socket,NOT MAPPABLE
+ICMP,ICMP protocol indicator,float64,Yes,No,No,Yes,Yes,None,Yes,Yes,No,NOT MAPPABLE,ICMP echo ping handled in background by LwIP; not in socket API,NOT MAPPABLE
+IPv,IPv4 indicator (almost 100% 1.0),float64,Yes,No,No,No,No,Near-zero variance,Yes,No,No,NOT MAPPABLE,IPv4 constant on local WLAN,NOT MAPPABLE
+LLC,Logical Link Control indicator (almost 100% 1.0),float64,Yes,No,No,Yes,Yes,Near-zero variance / L2 frame header,Yes,No,No,NOT MAPPABLE,L2 IEEE 802.2 LLC framing,NOT MAPPABLE
+Tot sum,Total cumulative sum of packet lengths in window,float64,Yes,No,Yes,No,No,None,Yes,Yes,Yes,window_total_bytes,Sum of bytes_tx + bytes_rx accumulated across window,HIGH
+Min,Minimum packet payload length in window,float64,Yes,No,Yes,No,No,None,Yes,Yes,Yes,min_chunk_bytes,Track min(len) over individual write() / read() calls,HIGH
+Max,Maximum packet payload length in window,float64,Yes,No,Yes,No,No,None,Yes,Yes,Yes,max_chunk_bytes,Track max(len) over individual write() / read() calls,HIGH
+AVG,Average packet payload length in window,float64,Yes,No,Yes,No,No,None,Yes,Yes,Yes,avg_chunk_bytes,window_total_bytes / packet_count,HIGH
+Std,Standard deviation of packet lengths in window,float64,Yes,No,Yes,No,No,None,Yes,Yes,Yes,std_chunk_bytes,sqrt(variance(chunk_sizes)) over window,HIGH
+Tot size,Total size of flow / session,float64,Yes,No,Yes,No,No,None,Yes,Yes,Yes,flow_total_bytes,Cumulative bytes transmitted + received,HIGH
+IAT,Inter-Arrival Time between consecutive packets (microseconds/seconds),float64,Yes,No,Yes,No,No,None,Yes,Yes,Yes,avg_inter_request_ms,Mean time delta between consecutive network actions via micros(),HIGH
+Number,Number of packets in flow/window,float64,Yes,Yes,Yes,No,No,None,Yes,Yes,Yes,window_packet_count,packets_tx + packets_rx in window,HIGH
+Magnitue,Vector magnitude of packet length and rate,float64,Yes,No,Yes,No,No,None,Yes,No,No,NOT MAPPABLE,Synthetic flow vector magnitude; unnecessary MCU math overhead,MEDIUM
+Radius,Dispersion radius of packet length vector,float64,Yes,No,Yes,No,No,None,Yes,No,No,NOT MAPPABLE,Synthetic flow dispersion metric,MEDIUM
+Covariance,Covariance of packet lengths and inter-arrival times,float64,Yes,No,No,No,Yes,None,Yes,No,No,NOT MAPPABLE,Multi-pass floating point covariance matrix; prohibitive on MCU real-time loop,NOT MAPPABLE
+Variance,Variance of packet lengths in window,float64,Yes,No,Yes,No,No,None,Yes,Yes,No,var_chunk_bytes,Std^2 (redundant with Std),HIGH
+Weight,Sliding window decay weight in CICFlowMeter,float64,Yes,No,No,No,No,Synthetic internal artifact of CICFlowMeter,Yes,No,No,NOT MAPPABLE,Internal extractor weight; meaningless outside CICFlowMeter,NOT MAPPABLE

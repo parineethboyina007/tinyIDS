@@ -1,0 +1,74 @@
+Feature,Dataset / Source,ESP32 Compatible?,Measurement Method on ESP32,Category
+flow_duration,CICIoT2023,Yes (Derivable),Measure connection lifetime (socket open to close) using millis() / micros(),B
+Duration,CICIoT2023,Yes (Derivable),Duration of active network session/window,B
+Rate,CICIoT2023,Yes (Derivable),Compute (packets_tx + packets_rx) / window_seconds,B
+Srate,CICIoT2023,Yes (Derivable),Compute packets_tx / window_seconds from endpoint application layer,B
+Drate,CICIoT2023,Yes (Derivable),Compute packets_rx / window_seconds arriving at endpoint,B
+IAT,CICIoT2023,Yes (Derivable),Inter-Arrival Time between consecutive incoming/outgoing packets via micros() delta,B
+Number,CICIoT2023,Yes (Direct),Packet count within current window,A
+Header_Length,CICIoT2023,Partial / Sniffer Only,"Available if promiscuous mode/raw L2/L3 sniffer active, but high CPU/RAM cost",C
+Protocol Type,CICIoT2023,Yes (Direct),Endpoint socket type known directly (TCP vs UDP),A
+fin_flag_number,CICIoT2023,No / External,Requires parsing L4 TCP headers; hidden inside LwIP stack in standard Arduino Client,C
+syn_flag_number,CICIoT2023,No / External,TCP handshake flags handled internally by LwIP / ESP-IDF,C
+rst_flag_number,CICIoT2023,No / External,Requires raw packet inspection or LwIP TCP callback instrumentation,C
+psh_flag_number,CICIoT2023,No / External,Requires raw packet inspection,C
+ack_flag_number,CICIoT2023,No / External,Requires raw packet inspection,C
+ece_flag_number,CICIoT2023,No / External,Requires raw packet inspection,C
+cwr_flag_number,CICIoT2023,No / External,Requires raw packet inspection,C
+ack_count,CICIoT2023,No / External,Requires tracking TCP ACK stream across raw frames,C
+syn_count,CICIoT2023,Derivable (Proxy),"Endpoint can count failed/outgoing connect() attempts, but cannot count network-wide SYN packets",B
+fin_count,CICIoT2023,No / External,Handled internally by TCP stack,C
+urg_count,CICIoT2023,No / External,Rare TCP flag; hidden by TCP stack,C
+rst_count,CICIoT2023,Derivable (Proxy),Endpoint can track socket disconnects / connection resets via client.connected(),B
+HTTP,CICIoT2023,Yes (Direct),Endpoint knows if current request/socket is HTTP,A
+HTTPS,CICIoT2023,Yes (Direct),Endpoint knows if TLS/HTTPS (WiFiClientSecure) is active,A
+DNS,CICIoT2023,Yes (Direct),Endpoint tracks DNS lookup calls / resolution duration,A
+Telnet,CICIoT2023,Constant (0.0) / Irrelevant,Telnet disabled / zero variance in dataset,D
+SMTP,CICIoT2023,Irrelevant on Endpoint,Arduino endpoint is not an email relay,D
+SSH,CICIoT2023,Irrelevant on Endpoint,ESP32 Arduino does not run SSH daemon,D
+IRC,CICIoT2023,Constant (0.0) / Irrelevant,IRC disabled / zero variance in dataset,D
+TCP,CICIoT2023,Yes (Direct),Endpoint knows if active connection is TCP,A
+UDP,CICIoT2023,Yes (Direct),Endpoint knows if active socket is UDP,A
+DHCP,CICIoT2023,Yes (Proxy),Endpoint monitors DHCP renewal / IP lease events,B
+ARP,CICIoT2023,No / External,Requires promiscuous mode / raw L2 ethernet frame inspection,C
+ICMP,CICIoT2023,No / External,ESP32 ICMP ping responder handled in background by LwIP,C
+IPv,CICIoT2023,Constant (1.0) / Irrelevant,All IP traffic is IPv4 in dataset,D
+LLC,CICIoT2023,Constant (1.0) / External,Link-layer control frame info; not exposed in socket API,D
+Tot sum,CICIoT2023,Yes (Derivable),Cumulative bytes transferred in window (bytes_tx + bytes_rx),B
+Min,CICIoT2023,Yes (Derivable),Minimum payload size per transaction in window,B
+Max,CICIoT2023,Yes (Derivable),Maximum payload size per transaction in window,B
+AVG,CICIoT2023,Yes (Derivable),Average payload size (Tot sum / count),B
+Std,CICIoT2023,Yes (Derivable),Standard deviation of payload sizes in window,B
+Tot size,CICIoT2023,Yes (Derivable),Total transaction size (bytes),B
+Magnitue,CICIoT2023,Derivable (Math),Vector magnitude of packet size & rate metrics,B
+Radius,CICIoT2023,Derivable (Math),Euclidean distance dispersion metric,B
+Covariance,CICIoT2023,Too Complex on ESP32,High floating point matrix operation for MCU loop,D
+Variance,CICIoT2023,Yes (Derivable),Variance of packet payload sizes or inter-arrival intervals,B
+Weight,CICIoT2023,CIC-Specific Synthetic,Internal artifact of CICFlowMeter sliding window weight,D
+ts,TON_IoT,Yes (Direct),Timestamp from millis() / epoch via NTP,A
+src_ip,TON_IoT,Leakage / Identifier,"Device local IP (static/identifying, poor feature)",D
+src_port,TON_IoT,Partial,Ephemeral port allocated by LwIP,C
+dst_ip,TON_IoT,Leakage / Identifier,"Server target IP (context-specific, overfitting risk)",D
+dst_port,TON_IoT,Yes (Direct),"Target service port (e.g. 80, 443, 1883 for MQTT)",A
+proto,TON_IoT,Yes (Direct),Protocol (tcp / udp),A
+service,TON_IoT,Yes (Direct),"Application protocol (http, dns, mqtt)",A
+duration,TON_IoT,Yes (Derivable),Connection lifetime in seconds,B
+src_bytes,TON_IoT,Yes (Direct),Bytes transmitted by client,A
+dst_bytes,TON_IoT,Yes (Direct),Bytes received by client,A
+conn_state,TON_IoT,Partial / Derivable,"TCP state (S0, S1, SF, OTH) - proxied by connect/disconnect callbacks",B
+missed_bytes,TON_IoT,No / External,Zeek sniffer metric for dropped TCP stream data,C
+src_pkts,TON_IoT,Yes (Direct),Packets / requests transmitted,A
+src_ip_bytes,TON_IoT,Yes (Derivable),Total IP bytes transmitted,B
+dst_pkts,TON_IoT,Yes (Direct),Packets / responses received,A
+dst_ip_bytes,TON_IoT,Yes (Derivable),Total IP bytes received,B
+http_status_code,TON_IoT,Yes (Direct),"HTTP response status (200, 404, 500) if HTTP client used",A
+free_heap,ESP32 Native,Yes (Direct),Free heap memory in bytes (esp_get_free_heap_size()),A
+min_free_heap,ESP32 Native,Yes (Direct),Lowest watermark heap (esp_get_minimum_free_heap_size()),A
+heap_delta,ESP32 Native,Yes (Derivable),Difference in free heap between start and end of window,A
+heap_usage_pct,ESP32 Native,Yes (Derivable),(1 - free_heap / total_heap) * 100,A
+loop_avg_ms,ESP32 Native,Yes (Derivable),Average execution time of loop() over window in ms,A
+loop_max_ms,ESP32 Native,Yes (Derivable),Worst-case execution time of loop() in ms (blocking detection),A
+loop_jitter_ms,ESP32 Native,Yes (Derivable),Standard deviation / variance of loop() latency,A
+wifi_rssi,ESP32 Native,Yes (Direct),Wi-Fi Received Signal Strength Indication (WiFi.RSSI()) in dBm,A
+wifi_reconnect_cnt,ESP32 Native,Yes (Direct),Count of Wi-Fi disconnection / reconnection events in window,A
+socket_fail_cnt,ESP32 Native,Yes (Direct),Count of failed connection or transmission attempts in window,A

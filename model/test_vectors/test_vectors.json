@@ -1,0 +1,82 @@
+[
+  {
+    "vector": "Normal Idle (minimal activity)",
+    "python_prediction": 1,
+    "cpp_prediction": 1,
+    "cpp_confidence": 1.0,
+    "normalize_match": true,
+    "parity_match": true
+  },
+  {
+    "vector": "Normal Periodic (moderate traffic)",
+    "python_prediction": 1,
+    "cpp_prediction": 1,
+    "cpp_confidence": 1.0,
+    "normalize_match": true,
+    "parity_match": true
+  },
+  {
+    "vector": "Normal Variable (higher traffic)",
+    "python_prediction": 0,
+    "cpp_prediction": 0,
+    "cpp_confidence": 1.0,
+    "normalize_match": true,
+    "parity_match": true
+  },
+  {
+    "vector": "Anomaly High-Rate Flood",
+    "python_prediction": 1,
+    "cpp_prediction": 1,
+    "cpp_confidence": 0.75,
+    "normalize_match": true,
+    "parity_match": true
+  },
+  {
+    "vector": "Anomaly Compute Stress",
+    "python_prediction": 1,
+    "cpp_prediction": 1,
+    "cpp_confidence": 0.75,
+    "normalize_match": true,
+    "parity_match": true
+  },
+  {
+    "vector": "Anomaly Memory Pressure",
+    "python_prediction": 0,
+    "cpp_prediction": 0,
+    "cpp_confidence": 1.0,
+    "normalize_match": true,
+    "parity_match": true
+  },
+  {
+    "vector": "Anomaly Combined (flood + compute)",
+    "python_prediction": 1,
+    "cpp_prediction": 1,
+    "cpp_confidence": 0.75,
+    "normalize_match": true,
+    "parity_match": true
+  },
+  {
+    "vector": "HW Normal (from real ESP32 data)",
+    "python_prediction": 0,
+    "cpp_prediction": 0,
+    "cpp_confidence": 1.0,
+    "normalize_match": true,
+    "parity_match": true
+  },
+  {
+    "vector": "HW Anomaly High-Rate (from real ESP32 data)",
+    "python_prediction": 1,
+    "cpp_prediction": 1,
+    "cpp_confidence": 1.0,
+    "normalize_match": true,
+    "parity_match": true
+  },
+  {
+    "vector": "HW Anomaly Compute (from real ESP32 data)",
+    "python_prediction": 1,
+    "cpp_prediction": 1,
+    "cpp_confidence": 1.0,
+    "normalize_match": true,
+    "parity_match": true
+  }
+]

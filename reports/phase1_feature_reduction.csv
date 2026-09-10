@@ -1,0 +1,7 @@
+feature_count,top_features,dt_accuracy,dt_precision,dt_recall,dt_f1,dt_fpr,rf_accuracy,rf_precision,rf_recall,rf_f1,rf_fpr
+44,"rst_count, urg_count, Variance, Tot size, AVG...",0.993,0.99906,0.98693,0.99296,0.00093,0.99107,1.0,0.98213,0.99099,0.0
+25,"rst_count, urg_count, Variance, Tot size, AVG...",0.99267,0.99798,0.98733,0.99263,0.002,0.99313,1.0,0.98627,0.99309,0.0
+15,"rst_count, urg_count, Variance, Tot size, AVG...",0.9936,0.99919,0.988,0.99356,0.0008,0.9906,0.99986,0.98133,0.99051,0.00013
+10,"rst_count, urg_count, Variance, Tot size, AVG...",0.98473,0.99672,0.97267,0.98455,0.0032,0.98473,0.9989,0.97053,0.98451,0.00107
+8,"rst_count, urg_count, Variance, Tot size, AVG...",0.9838,0.99726,0.97027,0.98358,0.00267,0.9832,0.9989,0.96747,0.98293,0.00107
+5,"rst_count, urg_count, Variance, Tot size, AVG",0.98427,0.99753,0.97093,0.98405,0.0024,0.98467,0.99877,0.97053,0.98445,0.0012

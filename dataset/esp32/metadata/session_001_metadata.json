@@ -1,0 +1,18 @@
+{
+  "session_id": "session_001",
+  "timestamp": "2026-09-09 11:01:03",
+  "total_windows": 40,
+  "discarded_transitions": 1,
+  "scenarios_collected": [
+    "NORMAL_IDLE",
+    "NORMAL_PERIODIC",
+    "NORMAL_VARIABLE",
+    "ANOMALY_HIGH_RATE",
+    "ANOMALY_BURST",
+    "ANOMALY_COMPUTE",
+    "ANOMALY_MEMORY",
+    "ANOMALY_COMBINED"
+  ],
+  "duration_seconds": 204.62,
+  "csv_path": "dataset/esp32/raw/session_001.csv"
+}

@@ -1,0 +1,35 @@
+label,category,train_samples,train_percentage
+DDoS-ICMP_Flood,DDoS,848088,15.4423
+DDoS-UDP_Flood,DDoS,637558,11.6089
+DDoS-TCP_Flood,DDoS,528499,9.6231
+DDoS-PSHACK_Flood,DDoS,481254,8.7629
+DDoS-SYN_Flood,DDoS,478653,8.7155
+DDoS-RSTFINFlood,DDoS,475441,8.657
+DDoS-SynonymousIP_Flood,DDoS,422083,7.6855
+DoS-UDP_Flood,DoS,390422,7.109
+DoS-TCP_Flood,DoS,314174,5.7206
+DoS-SYN_Flood,DoS,237573,4.3258
+BenignTraffic,Benign,129538,2.3587
+Mirai-greeth_flood,Mirai / Botnet,116133,2.1146
+Mirai-udpplain,Mirai / Botnet,104814,1.9085
+Mirai-greip_flood,Mirai / Botnet,88821,1.6173
+DDoS-ICMP_Fragmentation,DDoS,53046,0.9659
+MITM-ArpSpoofing,Spoofing / MITM,36316,0.6613
+DDoS-UDP_Fragmentation,DDoS,34169,0.6222
+DDoS-ACK_Fragmentation,DDoS,33581,0.6115
+DNS_Spoofing,Spoofing / MITM,21214,0.3863
+Recon-HostDiscovery,Reconnaissance,15737,0.2865
+Recon-OSScan,Reconnaissance,11587,0.211
+Recon-PortScan,Reconnaissance,9648,0.1757
+DoS-HTTP_Flood,DoS,8487,0.1545
+VulnerabilityScan,Reconnaissance,4396,0.08
+DDoS-HTTP_Flood,DDoS,3371,0.0614
+DDoS-SlowLoris,DoS / Slowloris,2757,0.0502
+DictionaryBruteForce,Brute Force,1541,0.0281
+BrowserHijacking,Web / Exploitation,665,0.0121
+CommandInjection,Injection / Exploitation,620,0.0113
+SqlInjection,Injection / Exploitation,590,0.0107
+XSS,Injection / Exploitation,414,0.0075
+Backdoor_Malware,Malware,392,0.0071
+Recon-PingSweep,Reconnaissance,249,0.0045
+Uploading_Attack,Exploitation,140,0.0025
